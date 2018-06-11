@@ -1,0 +1,25 @@
+page-quicklink {
+
+	font-family: $primary-font;
+
+	.quickLink-card{
+		background-color: $app-primary-color;
+		height: 100px;
+		margin-top: $standard-gap;
+		text-align: center;
+	}
+
+	.quick-icon{
+		margin-bottom: 5px;
+		.icon{
+			font-size: 3em;
+			color: white;
+		}
+	}
+
+	.quick-text{
+		color: white;
+		font-weight: $primary-font-light;
+	}
+
+}

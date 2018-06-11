@@ -1,0 +1,38 @@
+
+<ion-content padding>
+
+	<div class="gallery-module default-top-content-gap clearfix">
+
+		<div class="gallery-module-block clearfix" *ngFor="let galleryListData of galleryList">
+
+			<div class="gallery-primary-info clearfix">
+				<div class="gallery-dp" [style.backgroundImage]="'url(' + galleryListData.dp + ')'"></div>
+				<div class="gallery-info">
+					<p>{{galleryListData.name}}</p>
+					<p><span>Size: {{galleryListData.size}}</span></p>
+				</div>
+			</div>
+
+			<div class="gallery-action clearfix">
+
+				<div class="action-button">
+					 <button ion-button icon-left color="light" (click)="DetailView(galleryListData)">
+						  <ion-icon name="eye"></ion-icon>
+						  View
+					</button>
+			   </div>
+
+			   <div class="action-button">
+					<button ion-button icon-left color="light">
+						  <ion-icon name="download"></ion-icon>
+						  Download
+					</button>
+			  </div>
+
+			</div>
+
+		</div>	
+
+	</div>	
+
+</ion-content>

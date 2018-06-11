@@ -1,0 +1,15 @@
+
+<ion-content class="tutorial-page">
+
+  <ion-slides pager>
+
+    <ion-slide *ngFor="let slide of slides">
+      <div class="custom-app-slider">
+        <div class="slide-img-holder" [style.backgroundImage]="'url(' + slide.image + ')'"><img [src]="slide.image" class="slide-image"/></div>
+        <div class="slide-title" [innerHTML]="slide.title"></div>
+      </div>
+    </ion-slide>
+
+
+  </ion-slides>
+</ion-content>

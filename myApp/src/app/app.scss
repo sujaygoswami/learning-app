@@ -1,0 +1,152 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.appHeader{
+		text-align: center;
+		background-color: $app-secondary-color;
+
+		&:after{
+			display: none;
+		}
+
+		img{
+			display: inline-block;
+		}
+	}
+
+
+
+
+.tabs-md{
+	.tab-button{
+		background-color: $app-secondary-color;
+
+		&[aria-selected=true]{
+			background-color: black;
+			.tab-button-icon, .tab-button-text{
+				color: $app-primary-color;
+				transform: scale(1, 1);
+			}
+		}
+	}
+
+	.tab-button-icon{
+		color: $app-primary-color;
+	}
+
+	.tab-button-text{
+		color: $app-primary-color;
+	}
+}
+
+
+.default-top-content-gap{
+	padding-top: 120px;
+}
+
+.default-top-content-gap-no-pad{
+	padding-top: 136px;
+}
+
+
+.element-row{
+	margin-left: -$gutter-gap;
+	margin-right: -$gutter-gap;
+}
+
+.element-col{
+
+	float: left;
+	padding-left: $gutter-gap;
+	padding-right: $gutter-gap;
+}
+
+
+@function calculate-width ($col-span) {
+    	@return 100% / $col-span 
+	}
+
+	.col-1{
+		width: calculate-width(1);
+	}
+
+	.col-2{
+		width: calculate-width(2);
+	}
+
+	.col-3{
+		width: calculate-width(3);
+	}
+
+	.col-4{
+		width: calculate-width(4);
+	}
+
+	.col-5{
+		width: calculate-width(5);
+	}
+
+	.col-6{
+		width: calculate-width(6);
+	}
+
+	.col-2-of-3{
+		width: calculate-width(3/2);
+	}
+
+
+.table-wrap{
+
+		display: table;
+		width: 100%;
+		height: 100%;
+		vertical-align: bottom;
+		margin: 0px;
+		table-layout:fixed;
+		background: transparent;
+
+
+
+		.table-cell{
+
+			display: table-cell;
+			
+			&.bottom-line{
+
+				vertical-align: bottom;
+			}
+
+			&.top-line{
+
+				vertical-align: top;
+			}
+
+			&.middle-line{
+
+				vertical-align: middle;
+			}
+
+		}
+	}

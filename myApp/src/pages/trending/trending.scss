@@ -1,0 +1,74 @@
+page-trending {
+
+
+	
+
+
+	ion-slides{
+		background-color: $app-primary-color;
+	}
+	.swiper-pagination-bullet{
+			width: 15px;
+			height: 15px;
+			background-color: transparent;
+			border: 2px solid $app-primary-color;
+			opacity: 0.5;
+
+			&.swiper-pagination-bullet-active{
+				opacity: 1;
+			}
+		}
+
+
+		.slide-zoom{
+			padding-top: 136px;
+		}
+	
+	.custom-app-slider{
+		height: 100%;
+		position: relative;
+		font-family: $primary-font;
+
+
+
+		.slide-img-holder{
+			height: 100%;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			img{
+				visibility: hidden;
+				width: 100%;
+				height: auto;
+				max-width: inherit;
+				max-height: inherit;
+				margin: 0px;
+			}
+		}
+
+		.slide-title{
+			position: absolute;
+			width: 100%;
+			left: 0px;
+			bottom: 50px;
+			padding: 15px;
+			font-size: 36px;
+			background-color: rgba($app-primary-color, 0.5);
+			color: white;
+			font-weight: $primary-font-light;
+		}
+	}
+	
+	
+
+
+	.tutorial-page {
+
+	  .slide-zoom {
+	    height: 100%;
+	  }
+
+	}
+
+}
