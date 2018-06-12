@@ -4,10 +4,10 @@ import { IonicPageModule } from 'ionic-angular';
 
 @NgModule({
   declarations: [
-    DetailPage,
+    LoginPage,
   ],
   imports: [
-    IonicPageModule.forChild(DetailPage),
+    IonicPageModule.forChild(LoginPage),
   ],
 })
-export class DetailPage {}
+export class LoginPage {}

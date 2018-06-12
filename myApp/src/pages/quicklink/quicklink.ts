@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PhotographersPage } from '../photographers/photographers';
+import { LoginPage } from '../login/login';
+import { GalleryPage } from '../gallery/gallery';
 
 
 /**
@@ -23,6 +26,19 @@ export class QuickLinkPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QuickLinkPage');
+  }
+
+
+  PhotographersListViewPage(){
+		this.navCtrl.push(PhotographersPage);
+	}
+
+  RegistrationViewPage(){
+    this.navCtrl.push(LoginPage);
+  }
+
+  GalleryListViewPage(){
+    this.navCtrl.push(GalleryPage);
   }
 
 }

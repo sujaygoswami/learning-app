@@ -12,9 +12,13 @@ import { TrendingPage } from '../pages/trending/trending';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DetailPage } from '../pages/detail/detail';
 import { QuickLinkPage } from '../pages/quicklink/quicklink';
+import { PhotographersPage } from '../pages/photographers/photographers';
+import { RegistrationPage } from '../pages/registration/registration';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TrendingPage,
     TabsPage,
     DetailPage,
-    QuickLinkPage
+    QuickLinkPage,
+    PhotographersPage,
+    RegistrationPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -39,12 +46,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TrendingPage,
     TabsPage,
     DetailPage,
-    QuickLinkPage
+    QuickLinkPage,
+    PhotographersPage,
+    RegistrationPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen, Camera, IonicImageViewerModule, File,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthServiceProvider
   ]
 })
 export class AppModule {}
