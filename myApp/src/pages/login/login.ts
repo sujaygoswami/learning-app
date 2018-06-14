@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { RegistrationPage } from '../registration/registration';
-import { TabsPage } from '../tabs/tabs';
+import { MyAccountPage } from '../my-account/my-account';
 
 
 /**
@@ -28,15 +28,17 @@ export class LoginPage {
   }
 
 
-  public createAccount() {
-    this.navCtrl.push('RegistrationPage');
+ public createAccount() {
+    this.navCtrl.push(RegistrationPage);
   }
 
+
+   
    public login() {
 	    this.showLoading()
 	    this.auth.login(this.registerCredentials).subscribe(allowed => {
 	      if (allowed) {        
-	        this.navCtrl.push('TabsPage');
+	        this.navCtrl.push(MyAccountPage);
 	      } else {
 	        this.showError("Access Denied");
 	      }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { LoginPage } from '../login/login';
 
 
 /**
@@ -21,6 +22,10 @@ export class RegistrationPage {
   registerCredentials = { email: '', password: '' };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthServiceProvider, private alertCtrl: AlertController) {
+  }
+
+  goToLogin() {
+    this.navCtrl.push(LoginPage);
   }
 
   public register() {
@@ -46,7 +51,7 @@ export class RegistrationPage {
           text: 'OK',
           handler: data => {
             if (this.createSuccess) {
-              this.navCtrl.popToRoot();
+              this.navCtrl.push(LoginPage);
             }
           }
         }

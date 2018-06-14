@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Camera } from '@ionic-native/camera';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 
 import { GalleryPage } from '../pages/gallery/gallery';
@@ -15,6 +16,8 @@ import { QuickLinkPage } from '../pages/quicklink/quicklink';
 import { PhotographersPage } from '../pages/photographers/photographers';
 import { RegistrationPage } from '../pages/registration/registration';
 import { LoginPage } from '../pages/login/login';
+import { MyAccountPage } from '../pages/my-account/my-account';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,7 +34,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     QuickLinkPage,
     PhotographersPage,
     RegistrationPage,
-    LoginPage
+    LoginPage,
+    MyAccountPage
   ],
   imports: [
     BrowserModule,
@@ -49,11 +53,12 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     QuickLinkPage,
     PhotographersPage,
     RegistrationPage,
-    LoginPage
+    LoginPage,
+    MyAccountPage
   ],
   providers: [
     StatusBar,
-    SplashScreen, Camera, IonicImageViewerModule, File,
+    SplashScreen, Camera, IonicImageViewerModule, File, FileTransfer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider
   ]
